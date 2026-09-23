@@ -122,6 +122,7 @@ h3,
 
 .logo img {
     display: block;
+
     width: 120px;
     height: auto;
 }
@@ -350,7 +351,7 @@ h3,
 }
 
 .dato-introduccion span {
-    color: #777777;
+    color: #999999;
     font-size: 0.75rem;
     letter-spacing: 2px;
 }
@@ -975,9 +976,10 @@ h3,
     transform: translateY(0);
 }
 
-/* =========================================
+
+/* =========================================================
    LIGHTBOX
-   ========================================= */
+   ========================================================= */
 
 .lightbox {
     position: fixed;
@@ -1064,7 +1066,7 @@ h3,
 .lightbox-siguiente {
     position: absolute;
     z-index: 10;
-    
+
     width: 45px;
     height: 45px;
 
@@ -1111,7 +1113,6 @@ h3,
 .lightbox-anterior:hover,
 .lightbox-siguiente:hover {
     color: #c9a227;
-
     border-color: #c9a227;
 }
 
@@ -1121,6 +1122,7 @@ h3,
 body.lightbox-abierto {
     overflow: hidden;
 }
+
 
 /* =========================================================
    11. CONTACTO
@@ -1137,9 +1139,7 @@ body.lightbox-abierto {
 }
 
 
-/* =========================================================
-   FORMULARIO
-   ========================================================= */
+/* FORMULARIO */
 
 .formulario-contacto {
     flex: 1;
@@ -1210,7 +1210,7 @@ body.lightbox-abierto {
 
 .campo input::placeholder,
 .campo textarea::placeholder {
-    color: #666666;
+    color: #888888;
 }
 
 .campo input:focus,
@@ -1222,9 +1222,7 @@ body.lightbox-abierto {
 }
 
 
-/* =========================================================
-   BOTÓN DEL FORMULARIO
-   ========================================================= */
+/* BOTÓN DEL FORMULARIO */
 
 .formulario-contacto button {
     width: fit-content;
@@ -1261,9 +1259,7 @@ body.lightbox-abierto {
 }
 
 
-/* =========================================================
-   INFORMACIÓN DE CONTACTO
-   ========================================================= */
+/* INFORMACIÓN DE CONTACTO */
 
 .informacion-contacto {
     flex: 1;
@@ -1295,9 +1291,7 @@ body.lightbox-abierto {
 }
 
 
-/* =========================================================
-   DATOS DE CONTACTO
-   ========================================================= */
+/* DATOS DE CONTACTO */
 
 .datos-contacto {
     display: flex;
@@ -1340,7 +1334,7 @@ body.lightbox-abierto {
 
     margin-bottom: 4px;
 
-    color: #777777;
+    color: #999999;
 
     font-size: 0.7rem;
     font-weight: 700;
@@ -1356,9 +1350,7 @@ body.lightbox-abierto {
 }
 
 
-/* =========================================================
-   FRASE
-   ========================================================= */
+/* FRASE */
 
 .frase-contacto {
     margin-top: auto;
@@ -1378,9 +1370,7 @@ body.lightbox-abierto {
 }
 
 
-/* =========================================================
-   MENSAJE DE ÉXITO
-   ========================================================= */
+/* MENSAJE DE ÉXITO */
 
 .mensaje-exito {
     margin-top: 10px;
@@ -1396,12 +1386,14 @@ body.lightbox-abierto {
     font-size: 0.9rem;
 }
 
+
 /* =========================================================
    12. DETALLE DE TEMPORADA
    ========================================================= */
 
 .detalle-temporada {
     padding: 90px 0;
+
     background-color: #111111;
 }
 
@@ -1460,7 +1452,7 @@ body.lightbox-abierto {
 }
 
 .datos-temporada span {
-    color: #888888;
+    color: #999999;
 
     font-size: 0.7rem;
     font-weight: 700;
@@ -1582,7 +1574,7 @@ body.lightbox-abierto {
 }
 
 .nav-temporada small {
-    color: #777777;
+    color: #999999;
 
     font-size: 0.65rem;
     font-weight: 700;
@@ -1601,6 +1593,7 @@ body.lightbox-abierto {
 
 .nav-temporada i {
     font-size: 0.8rem;
+
     transition: transform 0.3s ease;
 }
 
@@ -1623,8 +1616,7 @@ body.lightbox-abierto {
 }
 
 
-/* AJUSTE DEL TÍTULO
-   Se conserva porque forma parte del ajuste visual actual. */
+/* AJUSTE DEL TÍTULO */
 
 #titulo-temporada {
     margin-right: -20px;
@@ -1713,7 +1705,7 @@ body.lightbox-abierto {
 .info-episodio p {
     margin: 0;
 
-    color: #777777;
+    color: #999999;
 
     font-size: 0.75rem;
     text-transform: uppercase;
@@ -1798,7 +1790,7 @@ body.lightbox-abierto {
 }
 
 .legales {
-    color: #777777;
+    color: #999999;
     font-size: 0.8rem;
     line-height: 1.6;
 }
@@ -1863,7 +1855,156 @@ body.lightbox-abierto {
 
 
 /* =========================================================
-   16. RESPONSIVE — TABLET GRANDE
+   16. DROPDOWN DE TEMPORADAS
+   ========================================================= */
+
+.menu-desplegable {
+    position: relative;
+}
+
+
+/* ENLACE PRINCIPAL */
+
+.enlace-temporadas {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.enlace-temporadas i {
+    font-size: 0.65rem;
+
+    transition: transform 0.3s ease;
+}
+
+
+/* SUBMENÚ */
+
+.menu-desplegable .submenu-temporadas {
+    position: absolute;
+    top: calc(100% + 12px);
+    left: 50%;
+
+    width: 190px;
+    min-width: 190px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+
+    padding: 8px 0;
+
+    background-color: #181818;
+    border: 1px solid #333333;
+
+    transform: translateX(-50%);
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    transition:
+        opacity 0.25s ease,
+        visibility 0.25s ease;
+
+    z-index: 1000;
+}
+
+
+/* PUENTE INVISIBLE PARA MANTENER EL HOVER */
+
+.menu-desplegable::after {
+    content: "";
+
+    position: absolute;
+    top: 100%;
+    left: -50px;
+
+    width: calc(100% + 100px);
+    height: 12px;
+}
+
+
+/* CONECTOR VISUAL */
+
+.menu-desplegable .submenu-temporadas::before {
+    content: "";
+
+    position: absolute;
+    top: -6px;
+    left: 50%;
+
+    width: 11px;
+    height: 11px;
+
+    background-color: #181818;
+
+    border-left: 1px solid #333333;
+    border-top: 1px solid #333333;
+
+    transform: translateX(-50%) rotate(45deg);
+}
+
+
+/* MOSTRAR SUBMENÚ */
+
+.menu-desplegable:hover .submenu-temporadas,
+.menu-desplegable:focus-within .submenu-temporadas {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.menu-desplegable:hover .enlace-temporadas i,
+.menu-desplegable:focus-within .enlace-temporadas i {
+    transform: rotate(180deg);
+}
+
+
+/* OPCIONES DEL SUBMENÚ */
+
+.menu-desplegable .submenu-temporadas li {
+    width: 100%;
+}
+
+.menu-desplegable .submenu-temporadas li a {
+    display: block;
+
+    width: 100%;
+
+    padding: 10px 20px;
+
+    color: #cccccc;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.78rem;
+    font-weight: 500;
+
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+
+    white-space: nowrap;
+
+    transition:
+        color 0.25s ease,
+        background-color 0.25s ease,
+        padding-left 0.25s ease;
+}
+
+.menu-desplegable .submenu-temporadas li a::after {
+    display: none;
+}
+
+.menu-desplegable .submenu-temporadas li a:hover {
+    color: #c9a227;
+    background-color: #222222;
+
+    padding-left: 25px;
+}
+
+
+/* =========================================================
+   17. RESPONSIVE — TABLET GRANDE
    ========================================================= */
 
 @media (max-width: 900px) {
@@ -1904,10 +2045,11 @@ body.lightbox-abierto {
 
 
 /* =========================================================
-   17. RESPONSIVE — TABLET / CELULAR
+   18. RESPONSIVE — TABLET / CELULAR
    ========================================================= */
 
 @media (max-width: 800px) {
+
     /* HEADER */
 
     .header-contenido {
@@ -2135,66 +2277,69 @@ body.lightbox-abierto {
         height: 520px;
     }
 
-    /* DROPDOWN DE TEMPORADAS EN MOBILE */
 
-.menu-desplegable {
-    width: 100%;
-}
+    /* DROPDOWN DE TEMPORADAS */
 
-.enlace-temporadas {
-    justify-content: center;
-}
+    .menu-desplegable {
+        width: 100%;
+    }
 
-.submenu-temporadas {
-    position: static;
+    .enlace-temporadas {
+        justify-content: center;
+    }
 
-    width: 100%;
-    min-width: 0;
+    .menu-desplegable .submenu-temporadas {
+        position: static;
 
-    padding: 5px 0;
+        width: 100%;
+        min-width: 0;
 
-    background-color: #151515;
+        display: none;
 
-    border: none;
+        padding: 5px 0;
 
-    transform: none;
+        background-color: #151515;
+        border: none;
 
-    opacity: 1;
-    visibility: visible;
+        transform: none;
 
-    pointer-events: auto;
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+    }
 
-    display: none;
-}
+    .menu-desplegable .submenu-temporadas::before {
+        display: none;
+    }
 
-.submenu-temporadas::before {
-    display: none;
-}
+    .menu-desplegable::after {
+        display: none;
+    }
 
-.menu-desplegable.submenu-abierto .submenu-temporadas {
-    display: flex;
-}
+    .menu-desplegable.submenu-abierto .submenu-temporadas {
+        display: flex;
+    }
 
-.menu-desplegable.submenu-abierto .enlace-temporadas i {
-    transform: rotate(180deg);
-}
+    .menu-desplegable.submenu-abierto .enlace-temporadas i {
+        transform: rotate(180deg);
+    }
 
-.submenu-temporadas li a {
-    padding: 10px;
+    .menu-desplegable .submenu-temporadas li a {
+        padding: 10px;
 
-    text-align: center;
+        text-align: center;
 
-    font-size: 0.75rem;
-}
+        font-size: 0.75rem;
+    }
 
-.submenu-temporadas li a:hover {
-    padding-left: 10px;
-}
+    .menu-desplegable .submenu-temporadas li a:hover {
+        padding-left: 10px;
+    }
 }
 
 
 /* =========================================================
-   18. RESPONSIVE — CELULAR
+   19. RESPONSIVE — CELULAR
    ========================================================= */
 
 @media (max-width: 600px) {
@@ -2357,51 +2502,52 @@ body.lightbox-abierto {
         font-size: 0.82rem;
     }
 
+
     /* LIGHTBOX */
 
-.lightbox {
-    padding: 25px 15px;
-}
+    .lightbox {
+        padding: 25px 15px;
+    }
 
-.lightbox-contenido {
-    max-width: 90vw;
-}
+    .lightbox-contenido {
+        max-width: 90vw;
+    }
 
-.lightbox-contenido img {
-    max-height: 65vh;
-}
+    .lightbox-contenido img {
+        max-height: 65vh;
+    }
 
-.lightbox-cerrar {
-    top: 15px;
-    right: 15px;
-}
+    .lightbox-cerrar {
+        top: 15px;
+        right: 15px;
+    }
 
-.lightbox-anterior,
-.lightbox-siguiente {
-    width: 38px;
-    height: 38px;
-}
+    .lightbox-anterior,
+    .lightbox-siguiente {
+        width: 38px;
+        height: 38px;
+    }
 
-.lightbox-anterior {
-    left: 10px;
-}
+    .lightbox-anterior {
+        left: 10px;
+    }
 
-.lightbox-siguiente {
-    right: 10px;
-}
+    .lightbox-siguiente {
+        right: 10px;
+    }
 
-.lightbox-info h2 {
-    font-size: 1.05rem;
-}
+    .lightbox-info h2 {
+        font-size: 1.05rem;
+    }
 
-.lightbox-info p {
-    font-size: 0.75rem;
-}
+    .lightbox-info p {
+        font-size: 0.75rem;
+    }
 }
 
 
 /* =========================================================
-   19. RESPONSIVE — CELULAR PEQUEÑO
+   20. RESPONSIVE — CELULAR PEQUEÑO
    ========================================================= */
 
 @media (max-width: 480px) {
@@ -2500,355 +2646,15 @@ body.lightbox-abierto {
     }
 }
 
+
+/* =========================================================
+   AJUSTES DE IMÁGENES DE EPISODIOS
+   ========================================================= */
+
 .imagen-4 {
     object-position: center 20%;
 }
 
 .imagen-8 {
     object-position: center 0%;
-}
-
-/* =========================================================
-   DROPDOWN DE TEMPORADAS
-   ========================================================= */
-
-.menu-desplegable {
-    position: relative;
-}
-
-
-/* ENLACE PRINCIPAL */
-
-.enlace-temporadas {
-    display: flex;
-    align-items: center;
-    gap: 7px;
-}
-
-.enlace-temporadas i {
-    font-size: 0.65rem;
-    transition: transform 0.3s ease;
-}
-
-
-/* SUBMENÚ */
-
-.submenu-temporadas {
-    position: absolute;
-    top: 100%;
-    left: 50%;
-
-    min-width: 190px;
-
-    display: flex;
-    flex-direction: column;
-
-    padding: 8px 0;
-
-    background-color: #181818;
-    border: 1px solid #333333;
-
-    transform: translateX(-50%) translateY(-10px);
-
-    opacity: 0;
-    visibility: hidden;
-
-    pointer-events: none;
-
-    transition:
-        opacity 0.25s ease,
-        transform 0.25s ease,
-        visibility 0.25s ease;
-
-    z-index: 1000;
-}
-
-
-/* PEQUEÑO CONECTOR CON EL NAV */
-
-.submenu-temporadas::before {
-    content: "";
-
-    position: absolute;
-
-    top: -6px;
-    left: 50%;
-
-    width: 11px;
-    height: 11px;
-
-    background-color: #181818;
-
-    border-left: 1px solid #333333;
-    border-top: 1px solid #333333;
-
-    transform: translateX(-50%) rotate(45deg);
-}
-
-
-/* MOSTRAR SUBMENÚ */
-
-.menu-desplegable:hover .submenu-temporadas,
-.menu-desplegable:focus-within .submenu-temporadas {
-    opacity: 1;
-    visibility: visible;
-
-    pointer-events: auto;
-
-    transform: translateX(-50%) translateY(0);
-}
-
-.menu-desplegable:hover .enlace-temporadas i,
-.menu-desplegable:focus-within .enlace-temporadas i {
-    transform: rotate(180deg);
-}
-
-
-/* OPCIONES DEL SUBMENÚ */
-
-.submenu-temporadas li {
-    width: 100%;
-}
-
-.submenu-temporadas li a {
-    display: block;
-
-    width: 100%;
-
-    padding: 10px 20px;
-
-    color: #cccccc;
-
-    font-family: "Montserrat", sans-serif;
-    font-size: 0.78rem;
-    font-weight: 500;
-
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-
-    white-space: nowrap;
-
-    transition:
-        color 0.25s ease,
-        background-color 0.25s ease,
-        padding-left 0.25s ease;
-}
-
-.submenu-temporadas li a::after {
-    display: none;
-}
-
-.submenu-temporadas li a:hover {
-    color: #c9a227;
-    background-color: #222222;
-
-    padding-left: 25px;
-}
-
-/* =========================================================
-   DROPDOWN DE TEMPORADAS
-   ========================================================= */
-
-.menu-desplegable {
-    position: relative;
-}
-
-
-/* ENLACE PRINCIPAL */
-
-.enlace-temporadas {
-    display: flex;
-    align-items: center;
-    gap: 7px;
-}
-
-.enlace-temporadas i {
-    font-size: 0.65rem;
-    transition: transform 0.3s ease;
-}
-
-
-/* SUBMENÚ */
-
-.menu-desplegable .submenu-temporadas {
-    position: absolute;
-    top: calc(100% + 12px);
-    left: 50%;
-
-    width: 190px;
-    min-width: 190px;
-
-    display: flex;
-    flex-direction: column;
-    gap: 0;
-
-    padding: 8px 0;
-
-    background-color: #181818;
-    border: 1px solid #333333;
-
-    transform: translateX(-50%);
-
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
-
-    transition:
-        opacity 0.25s ease,
-        visibility 0.25s ease;
-
-    z-index: 1000;
-}
-
-.menu-desplegable::after {
-    content: "";
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    height: 12px;
-}
-
-
-/* PEQUEÑO CONECTOR CON EL NAV */
-
-.menu-desplegable .submenu-temporadas::before {
-    content: "";
-
-    position: absolute;
-
-    top: -6px;
-    left: 50%;
-
-    width: 11px;
-    height: 11px;
-
-    background-color: #181818;
-
-    border-left: 1px solid #333333;
-    border-top: 1px solid #333333;
-
-    transform: translateX(-50%) rotate(45deg);
-}
-
-
-/* MOSTRAR SUBMENÚ */
-
-.menu-desplegable:hover .submenu-temporadas,
-.menu-desplegable:focus-within .submenu-temporadas {
-    opacity: 1;
-    visibility: visible;
-
-    pointer-events: auto;
-
-    transform: translateX(-50%) translateY(0);
-}
-
-.menu-desplegable:hover .enlace-temporadas i,
-.menu-desplegable:focus-within .enlace-temporadas i {
-    transform: rotate(180deg);
-}
-
-
-/* OPCIONES DEL SUBMENÚ */
-
-.menu-desplegable .submenu-temporadas li {
-    width: 100%;
-}
-
-.menu-desplegable .submenu-temporadas li a {
-    display: block;
-
-    width: 100%;
-
-    padding: 10px 20px;
-
-    color: #cccccc;
-
-    font-family: "Montserrat", sans-serif;
-    font-size: 0.78rem;
-    font-weight: 500;
-
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-
-    white-space: nowrap;
-
-    transition:
-        color 0.25s ease,
-        background-color 0.25s ease,
-        padding-left 0.25s ease;
-}
-
-.menu-desplegable .submenu-temporadas li a::after {
-    display: none;
-}
-
-.menu-desplegable .submenu-temporadas li a:hover {
-    color: #c9a227;
-    background-color: #222222;
-
-    padding-left: 25px;
-}
-
-
-/* =========================================================
-   DROPDOWN — MOBILE
-   ========================================================= */
-
-@media (max-width: 800px) {
-
-    .menu-desplegable {
-        width: 100%;
-    }
-
-    .enlace-temporadas {
-        justify-content: center;
-    }
-
-    .menu-desplegable .submenu-temporadas {
-        position: static;
-
-        width: 100%;
-        min-width: 0;
-
-        padding: 5px 0;
-
-        background-color: #151515;
-
-        border: none;
-
-        transform: none;
-
-        opacity: 1;
-        visibility: visible;
-
-        pointer-events: auto;
-
-        display: none;
-    }
-
-    .menu-desplegable .submenu-temporadas::before {
-        display: none;
-    }
-
-    .menu-desplegable.submenu-abierto .submenu-temporadas {
-        display: flex;
-    }
-
-    .menu-desplegable.submenu-abierto .enlace-temporadas i {
-        transform: rotate(180deg);
-    }
-
-    .menu-desplegable .submenu-temporadas li a {
-        padding: 10px;
-
-        text-align: center;
-
-        font-size: 0.75rem;
-    }
-
-    .menu-desplegable .submenu-temporadas li a:hover {
-        padding-left: 10px;
-    }
 }
