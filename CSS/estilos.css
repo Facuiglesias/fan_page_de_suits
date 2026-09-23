@@ -1,0 +1,2854 @@
+/* =========================================================
+   SUITS FAN SITE — ESTILOS PRINCIPALES
+   ========================================================= */
+
+
+/* =========================================================
+   1. ESTILOS GENERALES
+   ========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+    font-family: "Montserrat", sans-serif;
+    color: #ffffff;
+    background-color: #111111;
+}
+
+main {
+    flex: 1;
+}
+
+.contenedor {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h1,
+h2,
+h3,
+.logo {
+    font-family: "Cinzel", serif;
+}
+
+
+/* =========================================================
+   2. ELEMENTOS GENERALES
+   ========================================================= */
+
+.subtitulo {
+    margin-bottom: 15px;
+
+    color: #c9a227;
+    font-size: 0.85rem;
+    font-weight: bold;
+    letter-spacing: 4px;
+}
+
+.linea-dorada {
+    width: 80px;
+    height: 3px;
+    margin: 25px 0 30px;
+
+    background-color: #c9a227;
+}
+
+.titulo-seccion {
+    max-width: 700px;
+    margin: 0 auto 60px;
+
+    text-align: center;
+}
+
+.titulo-seccion h1 {
+    margin-bottom: 20px;
+
+    font-size: 3.5rem;
+    letter-spacing: 4px;
+}
+
+.titulo-seccion .linea-dorada {
+    margin: 25px auto;
+}
+
+.titulo-seccion > p:last-child {
+    color: #aaaaaa;
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   3. HEADER
+   ========================================================= */
+
+.header {
+    padding: 25px 0;
+
+    background-color: #111111;
+    border-bottom: 1px solid #333333;
+}
+
+.header-contenido {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+/* LOGO */
+
+.logo {
+    display: flex;
+    align-items: center;
+
+    color: #ffffff;
+    text-decoration: none;
+
+    transition: color 0.3s ease;
+}
+
+.logo img {
+    display: block;
+    width: 120px;
+    height: auto;
+}
+
+.logo:hover {
+    color: #c9a227;
+}
+
+
+/* NAVEGACIÓN */
+
+.navegacion ul {
+    display: flex;
+    gap: 35px;
+
+    list-style: none;
+}
+
+.navegacion a {
+    position: relative;
+
+    color: #ffffff;
+    text-decoration: none;
+
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+
+    transition: color 0.3s ease;
+}
+
+.navegacion a::after {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+
+    width: 0;
+    height: 2px;
+
+    background-color: #c9a227;
+
+    transition: width 0.3s ease;
+}
+
+.navegacion a:hover,
+.navegacion a.activo {
+    color: #c9a227;
+}
+
+.navegacion a:hover::after,
+.navegacion a.activo::after {
+    width: 100%;
+}
+
+
+/* =========================================================
+   4. BOTONES
+   ========================================================= */
+
+.boton-principal {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+
+    padding: 14px 24px;
+
+    color: #111111;
+    background-color: #c9a227;
+
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+
+    transition:
+        background-color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.boton-principal:hover {
+    background-color: #ffffff;
+    transform: translateX(5px);
+}
+
+
+/* =========================================================
+   5. INICIO — HERO
+   ========================================================= */
+
+.inicio {
+    position: relative;
+
+    min-height: calc(100vh - 100px);
+
+    display: flex;
+    align-items: center;
+
+    overflow: hidden;
+}
+
+.video-fondo {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    z-index: 0;
+}
+
+.overlay-video {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0.9) 0%,
+            rgba(0, 0, 0, 0.65) 45%,
+            rgba(0, 0, 0, 0.35) 100%
+        );
+
+    z-index: 1;
+}
+
+.contenido-inicio {
+    position: relative;
+    z-index: 2;
+
+    display: flex;
+    align-items: center;
+
+    width: 100%;
+    padding: 0 30px;
+}
+
+.texto-inicio {
+    max-width: 650px;
+}
+
+.texto-inicio h1 {
+    font-size: 6rem;
+    line-height: 1;
+    font-weight: 700;
+    letter-spacing: 12px;
+}
+
+.texto-inicio p:not(.subtitulo) {
+    max-width: 550px;
+    margin-bottom: 25px;
+
+    color: #dddddd;
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+
+.texto-inicio .linea-dorada {
+    margin: 25px 0 30px;
+}
+
+
+/* =========================================================
+   6. INICIO — INTRODUCCIÓN
+   ========================================================= */
+
+.introduccion {
+    padding: 100px 0;
+
+    background-color: #151515;
+
+    border-top: 1px solid #222222;
+    border-bottom: 1px solid #222222;
+}
+
+.contenido-introduccion {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 80px;
+}
+
+.texto-introduccion {
+    flex: 1;
+    max-width: 700px;
+}
+
+.texto-introduccion h2 {
+    font-size: 3rem;
+    line-height: 1.2;
+    letter-spacing: 2px;
+}
+
+.texto-introduccion p:not(.subtitulo) {
+    margin-bottom: 18px;
+
+    color: #aaaaaa;
+    font-size: 0.95rem;
+    line-height: 1.8;
+}
+
+.texto-introduccion .linea-dorada {
+    margin: 25px 0 30px;
+}
+
+.dato-introduccion {
+    width: 220px;
+    min-width: 220px;
+    height: 220px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #111111;
+    border: 1px solid #333333;
+
+    text-align: center;
+}
+
+.dato-introduccion span {
+    color: #777777;
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+}
+
+.dato-introduccion strong {
+    margin: 10px 0;
+
+    color: #c9a227;
+    font-size: 5rem;
+    line-height: 1;
+}
+
+.dato-introduccion p {
+    color: #cccccc;
+
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+
+/* =========================================================
+   7. INICIO — PERSONAJES
+   ========================================================= */
+
+.personajes {
+    padding: 100px 0;
+}
+
+.lista-personajes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.tarjeta-personaje {
+    position: relative;
+
+    flex: 1 1 calc(33.333% - 20px);
+
+    min-width: 280px;
+    height: 360px;
+
+    display: flex;
+    align-items: flex-end;
+
+    padding: 30px;
+
+    overflow: hidden;
+
+    background-color: #181818;
+    background-size: 100%;
+    background-position: center;
+
+    border: 1px solid #333333;
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        background-size 0.5s ease;
+}
+
+.tarjeta-personaje::before {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            to top,
+            rgba(0, 0, 0, 0.95) 0%,
+            rgba(0, 0, 0, 0.65) 45%,
+            rgba(0, 0, 0, 0.15) 100%
+        );
+
+    z-index: 1;
+
+    transition: background 0.4s ease;
+}
+
+.contenido-personaje,
+.info-personaje {
+    position: relative;
+    z-index: 2;
+}
+
+.contenido-personaje {
+    width: 100%;
+}
+
+.numero-personaje {
+    position: absolute;
+    top: -285px;
+    right: 0;
+
+    color: #c9a227;
+    font-size: 2.5rem;
+    font-weight: bold;
+    line-height: 1;
+
+    opacity: 0.8;
+    z-index: 2;
+}
+
+.tarjeta-personaje h3 {
+    margin: 0;
+
+    color: #ffffff;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+}
+
+.tarjeta-personaje .info-personaje > p {
+    margin-top: 7px;
+
+    color: #c9a227;
+
+    font-size: 0.75rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.linea-personaje {
+    width: 40px;
+    height: 2px;
+
+    margin: 20px 0;
+
+    background-color: #c9a227;
+}
+
+.tarjeta-personaje .info-personaje > span:last-child {
+    color: #bbbbbb;
+    font-size: 0.85rem;
+    line-height: 1.6;
+}
+
+.tarjeta-personaje:hover {
+    transform: translateY(-6px);
+    border-color: #c9a227;
+    background-size: 108%;
+}
+
+.tarjeta-personaje:hover::before {
+    background:
+        linear-gradient(
+            to top,
+            rgba(0, 0, 0, 0.98) 0%,
+            rgba(0, 0, 0, 0.55) 55%,
+            rgba(0, 0, 0, 0.1) 100%
+        );
+}
+
+
+/* IMÁGENES DE PERSONAJES */
+
+.personaje-harvey {
+    background-image: url("../IMG/harvey.webp");
+    background-position: center 5%;
+}
+
+.personaje-mike {
+    background-image: url("../IMG/mike.webp");
+    background-position: center 0%;
+}
+
+.personaje-donna {
+    background-image: url("../IMG/donna.webp");
+    background-position: center 20%;
+}
+
+.personaje-louis {
+    background-image: url("../IMG/louis.webp");
+    background-position: center 15%;
+}
+
+.personaje-jessica {
+    background-image: url("../IMG/jessica.webp");
+    background-position: center 5%;
+}
+
+.personaje-rachel {
+    background-image: url("../IMG/rachel.webp");
+    background-position: center 10%;
+}
+
+
+/* =========================================================
+   8. INICIO — TEMPORADAS DESTACADAS
+   ========================================================= */
+
+.temporadas-destacadas {
+    padding: 100px 0;
+
+    background-color: #151515;
+    border-top: 1px solid #222222;
+}
+
+.lista-destacadas {
+    display: flex;
+    gap: 20px;
+}
+
+.destacada {
+    position: relative;
+
+    flex: 1;
+    height: 350px;
+
+    display: flex;
+    align-items: flex-end;
+
+    padding: 30px;
+
+    overflow: hidden;
+
+    background-size: cover;
+    background-position: center;
+
+    border: 1px solid #333333;
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.destacada::before {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            to top,
+            rgba(0, 0, 0, 0.95) 0%,
+            rgba(0, 0, 0, 0.55) 45%,
+            rgba(0, 0, 0, 0.15) 100%
+        );
+}
+
+.destacada > div {
+    position: relative;
+    z-index: 1;
+}
+
+.destacada > div > span {
+    display: block;
+    margin-bottom: 8px;
+
+    color: #c9a227;
+    font-size: 0.8rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.destacada h3 {
+    margin-bottom: 10px;
+
+    font-size: 1.7rem;
+    letter-spacing: 1px;
+}
+
+.destacada p {
+    max-width: 300px;
+
+    color: #bbbbbb;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.destacada:hover {
+    transform: translateY(-6px);
+    border-color: #c9a227;
+}
+
+.boton-temporadas {
+    display: flex;
+    justify-content: center;
+    margin-top: 45px;
+}
+
+
+/* IMÁGENES DESTACADAS */
+
+.temporada-destacada-1 {
+    background-image: url("../IMG/temporada01.webp");
+    background-position: center 5%;
+}
+
+.temporada-destacada-5 {
+    background-image: url("../IMG/temporada05.webp");
+    background-position: center 50%;
+}
+
+.temporada-destacada-9 {
+    background-image: url("../IMG/temporada09.webp");
+    background-position: center 35%;
+}
+
+
+/* =========================================================
+   9. TEMPORADAS
+   ========================================================= */
+
+.temporadas {
+    padding: 70px 0;
+}
+
+.lista-temporadas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.tarjeta-temporada {
+    position: relative;
+
+    flex: 1 1 calc(33.333% - 25px);
+
+    min-width: 280px;
+    height: 280px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    padding: 30px;
+
+    overflow: hidden;
+
+    background-color: #181818;
+    background-size: cover;
+    background-position: center;
+
+    border: 1px solid #333333;
+
+    transition:
+        transform 0.35s ease,
+        border-color 0.35s ease;
+}
+
+.tarjeta-temporada::before {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            to top,
+            rgba(0, 0, 0, 0.97) 0%,
+            rgba(0, 0, 0, 0.70) 45%,
+            rgba(0, 0, 0, 0.20) 100%
+        );
+
+    z-index: 1;
+
+    transition: background 0.4s ease;
+}
+
+.numero-temporada {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+
+    color: #c9a227;
+
+    font-size: 3.8rem;
+    font-weight: 700;
+    line-height: 1;
+
+    opacity: 0.75;
+    z-index: 2;
+
+    transition:
+        transform 0.35s ease,
+        opacity 0.35s ease;
+}
+
+.contenido-tarjeta {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    z-index: 2;
+}
+
+.contenido-tarjeta::before {
+    content: "";
+
+    width: 35px;
+    height: 2px;
+
+    margin-bottom: 4px;
+
+    background-color: #c9a227;
+
+    transition: width 0.35s ease;
+}
+
+.contenido-tarjeta h2 {
+    font-size: 1.45rem;
+    letter-spacing: 1px;
+}
+
+.contenido-tarjeta p {
+    color: #cccccc;
+    font-size: 0.85rem;
+}
+
+.contenido-tarjeta a {
+    width: fit-content;
+
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    margin-top: 8px;
+
+    color: #c9a227;
+
+    font-size: 0.78rem;
+    font-weight: 700;
+
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+
+    transition:
+        color 0.3s ease,
+        gap 0.3s ease;
+}
+
+.contenido-tarjeta a::after {
+    content: "→";
+
+    font-size: 1rem;
+
+    transition: transform 0.3s ease;
+}
+
+.contenido-tarjeta a:hover {
+    gap: 12px;
+    color: #ffffff;
+}
+
+.contenido-tarjeta a:hover::after {
+    transform: translateX(3px);
+}
+
+.tarjeta-temporada:hover {
+    transform: translateY(-7px);
+    border-color: #c9a227;
+}
+
+.tarjeta-temporada:hover .numero-temporada {
+    transform: translateY(-4px);
+    opacity: 1;
+}
+
+.tarjeta-temporada:hover .contenido-tarjeta::before {
+    width: 60px;
+}
+
+
+/* IMÁGENES DE TEMPORADAS */
+
+.temporada-1 {
+    background-image: url("../IMG/temporada01.webp");
+    background-position: center 0%;
+}
+
+.temporada-2 {
+    background-image: url("../IMG/temporada02.webp");
+    background-position: center 10%;
+}
+
+.temporada-3 {
+    background-image: url("../IMG/temporada03.webp");
+    background-position: center 0%;
+}
+
+.temporada-4 {
+    background-image: url("../IMG/temporada04.webp");
+}
+
+.temporada-5 {
+    background-image: url("../IMG/temporada05.webp");
+    background-position: center 65%;
+}
+
+.temporada-6 {
+    background-image: url("../IMG/temporada06.webp");
+}
+
+.temporada-7 {
+    background-image: url("../IMG/temporada07.webp");
+    background-position: center 35%;
+}
+
+.temporada-8 {
+    background-image: url("../IMG/temporada08.webp");
+    background-position: center 65%;
+}
+
+.temporada-9 {
+    background-image: url("../IMG/temporada09.webp");
+    background-position: center 35%;
+}
+
+
+/* =========================================================
+   10. GALERÍA
+   ========================================================= */
+
+.galeria {
+    padding: 70px 0;
+}
+
+.contenedor-galeria {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.foto {
+    position: relative;
+
+    flex: 1 1 calc(25% - 20px);
+
+    min-width: 250px;
+    height: 300px;
+
+    overflow: hidden;
+
+    background-color: #222222;
+    border: 1px solid #333333;
+
+    cursor: pointer;
+}
+
+.foto-grande {
+    flex: 2 1 calc(50% - 20px);
+}
+
+.foto img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition:
+        transform 0.5s ease,
+        filter 0.5s ease;
+}
+
+.foto::after {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            to top,
+            rgba(0, 0, 0, 0.9),
+            rgba(0, 0, 0, 0.1)
+        );
+
+    opacity: 0.7;
+
+    transition: opacity 0.4s ease;
+}
+
+.info-foto {
+    position: absolute;
+
+    left: 25px;
+    right: 25px;
+    bottom: 25px;
+
+    z-index: 2;
+
+    transform: translateY(15px);
+    opacity: 0;
+
+    transition:
+        opacity 0.4s ease,
+        transform 0.4s ease;
+}
+
+.info-foto h2 {
+    margin-bottom: 5px;
+
+    color: #ffffff;
+    font-size: 1.3rem;
+}
+
+.info-foto p {
+    color: #cccccc;
+    font-size: 0.85rem;
+}
+
+.foto:hover img {
+    transform: scale(1.08);
+    filter: brightness(0.65);
+}
+
+.foto:hover::after {
+    opacity: 1;
+}
+
+.foto:hover .info-foto {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* =========================================
+   LIGHTBOX
+   ========================================= */
+
+.lightbox {
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 1000;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 40px;
+
+    background-color: rgba(0, 0, 0, 0.94);
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    transition:
+        opacity 0.3s ease,
+        visibility 0.3s ease;
+}
+
+.lightbox.activo {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+
+/* CONTENIDO */
+
+.lightbox-contenido {
+    position: relative;
+
+    max-width: min(1000px, 85vw);
+    max-height: 85vh;
+
+    text-align: center;
+}
+
+.lightbox-contenido img {
+    display: block;
+
+    max-width: 100%;
+    max-height: 75vh;
+
+    width: auto;
+    height: auto;
+
+    object-fit: contain;
+
+    border: 1px solid #333333;
+}
+
+
+/* INFORMACIÓN */
+
+.lightbox-info {
+    padding-top: 15px;
+}
+
+.lightbox-info h2 {
+    margin-bottom: 5px;
+
+    color: #ffffff;
+
+    font-size: 1.3rem;
+}
+
+.lightbox-info p {
+    color: #aaaaaa;
+
+    font-size: 0.85rem;
+}
+
+
+/* BOTONES */
+
+.lightbox-cerrar,
+.lightbox-anterior,
+.lightbox-siguiente {
+    position: absolute;
+    z-index: 10;
+    
+    width: 45px;
+    height: 45px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #ffffff;
+
+    background-color: rgba(17, 17, 17, 0.85);
+
+    border: 1px solid #444444;
+
+    cursor: pointer;
+
+    transition:
+        color 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.lightbox-cerrar {
+    top: 25px;
+    right: 25px;
+}
+
+.lightbox-anterior {
+    left: 25px;
+    top: 50%;
+
+    transform: translateY(-50%);
+}
+
+.lightbox-siguiente {
+    right: 25px;
+    top: 50%;
+
+    transform: translateY(-50%);
+}
+
+
+/* HOVER */
+
+.lightbox-cerrar:hover,
+.lightbox-anterior:hover,
+.lightbox-siguiente:hover {
+    color: #c9a227;
+
+    border-color: #c9a227;
+}
+
+
+/* BLOQUEAR SCROLL */
+
+body.lightbox-abierto {
+    overflow: hidden;
+}
+
+/* =========================================================
+   11. CONTACTO
+   ========================================================= */
+
+.contacto {
+    padding: 70px 0;
+}
+
+.contenido-contacto {
+    display: flex;
+    align-items: stretch;
+    gap: 70px;
+}
+
+
+/* =========================================================
+   FORMULARIO
+   ========================================================= */
+
+.formulario-contacto {
+    flex: 1;
+
+    padding: 40px;
+
+    background-color: #181818;
+    border: 1px solid #333333;
+}
+
+.formulario-contacto h2 {
+    margin-bottom: 30px;
+
+    font-size: 1.5rem;
+    letter-spacing: 0.5px;
+}
+
+.formulario-contacto form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.campo label {
+    color: #cccccc;
+
+    font-size: 0.85rem;
+    font-weight: 700;
+
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.campo input,
+.campo textarea {
+    width: 100%;
+
+    padding: 13px 15px;
+
+    color: #ffffff;
+    background-color: #111111;
+
+    border: 1px solid #333333;
+    outline: none;
+
+    font-family: inherit;
+    font-size: 0.9rem;
+
+    transition:
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.campo input {
+    height: 46px;
+}
+
+.campo textarea {
+    min-height: 140px;
+    resize: vertical;
+}
+
+.campo input::placeholder,
+.campo textarea::placeholder {
+    color: #666666;
+}
+
+.campo input:focus,
+.campo textarea:focus {
+    border-color: #c9a227;
+
+    box-shadow:
+        0 0 0 2px rgba(201, 162, 39, 0.1);
+}
+
+
+/* =========================================================
+   BOTÓN DEL FORMULARIO
+   ========================================================= */
+
+.formulario-contacto button {
+    width: fit-content;
+
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    margin-top: 5px;
+    padding: 13px 22px;
+
+    color: #111111;
+    background-color: #c9a227;
+
+    border: none;
+
+    font-family: inherit;
+    font-size: 0.8rem;
+    font-weight: 700;
+
+    text-transform: uppercase;
+    letter-spacing: 1px;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.formulario-contacto button:hover {
+    background-color: #ffffff;
+    transform: translateX(5px);
+}
+
+
+/* =========================================================
+   INFORMACIÓN DE CONTACTO
+   ========================================================= */
+
+.informacion-contacto {
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 15px 10px 0 0;
+}
+
+.informacion-contacto h2 {
+    margin-bottom: 20px;
+
+    font-size: 2rem;
+    letter-spacing: 1px;
+}
+
+.informacion-contacto .linea-dorada {
+    margin: 20px 0 25px;
+}
+
+.informacion-contacto > p:not(.subtitulo) {
+    max-width: 520px;
+    margin-bottom: 35px;
+
+    color: #aaaaaa;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   DATOS DE CONTACTO
+   ========================================================= */
+
+.datos-contacto {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.dato {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.dato i {
+    width: 42px;
+    height: 42px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: #c9a227;
+
+    border: 1px solid #333333;
+
+    transition:
+        color 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.dato:hover i {
+    color: #ffffff;
+    border-color: #c9a227;
+}
+
+.dato span {
+    display: block;
+
+    margin-bottom: 4px;
+
+    color: #777777;
+
+    font-size: 0.7rem;
+    font-weight: 700;
+
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.dato p {
+    color: #dddddd;
+
+    font-size: 0.9rem;
+}
+
+
+/* =========================================================
+   FRASE
+   ========================================================= */
+
+.frase-contacto {
+    margin-top: auto;
+    padding: 25px;
+
+    background-color: #181818;
+
+    border-left: 2px solid #c9a227;
+}
+
+.frase-contacto p {
+    color: #aaaaaa;
+
+    font-size: 0.9rem;
+    font-style: italic;
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   MENSAJE DE ÉXITO
+   ========================================================= */
+
+.mensaje-exito {
+    margin-top: 10px;
+    padding: 12px;
+
+    color: #c9a227;
+    background-color: #181818;
+
+    border: 1px solid #333333;
+
+    text-align: center;
+
+    font-size: 0.9rem;
+}
+
+/* =========================================================
+   12. DETALLE DE TEMPORADA
+   ========================================================= */
+
+.detalle-temporada {
+    padding: 90px 0;
+    background-color: #111111;
+}
+
+.contenido-detalle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 70px;
+}
+
+
+/* INFORMACIÓN */
+
+.texto-detalle {
+    flex: 1;
+    max-width: 600px;
+}
+
+.texto-detalle .subtitulo {
+    margin-bottom: 12px;
+}
+
+.texto-detalle h1 {
+    margin-bottom: 20px;
+
+    font-size: 3.5rem;
+    line-height: 1.1;
+}
+
+.texto-detalle > p:not(.subtitulo) {
+    margin-top: 25px;
+
+    color: #cccccc;
+
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+
+/* DATOS */
+
+.datos-temporada {
+    display: flex;
+    gap: 60px;
+
+    margin-top: 35px;
+    padding-top: 25px;
+
+    border-top: 1px solid #333333;
+}
+
+.datos-temporada div {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.datos-temporada span {
+    color: #888888;
+
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.datos-temporada p {
+    color: #c9a227;
+
+    font-family: "Cinzel", serif;
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+
+/* BOTÓN VOLVER */
+
+.volver-temporadas {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+
+    margin-top: 40px;
+
+    color: #c9a227;
+
+    font-size: 0.8rem;
+    font-weight: 700;
+
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+
+    transition:
+        color 0.3s ease,
+        gap 0.3s ease;
+}
+
+.volver-temporadas:hover {
+    color: #ffffff;
+    gap: 14px;
+}
+
+
+/* IMAGEN */
+
+.imagen-detalle {
+    position: relative;
+
+    flex: 0 0 420px;
+
+    overflow: hidden;
+
+    background-color: #181818;
+    border: 1px solid #333333;
+}
+
+.imagen-detalle::after {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    border: 1px solid rgba(201, 162, 39, 0.25);
+
+    pointer-events: none;
+
+    transition: border-color 0.3s ease;
+}
+
+.imagen-detalle img {
+    display: block;
+
+    width: 100%;
+    height: 520px;
+
+    object-fit: cover;
+}
+
+.imagen-detalle:hover {
+    border-color: #c9a227;
+}
+
+.imagen-detalle:hover::after {
+    border-color: rgba(201, 162, 39, 0.7);
+}
+
+
+/* NAVEGACIÓN ENTRE TEMPORADAS */
+
+.navegacion-temporadas {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+
+    margin-top: 50px;
+    padding-top: 30px;
+
+    border-top: 1px solid #333333;
+}
+
+.nav-temporada {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    color: #c9a227;
+    text-decoration: none;
+
+    transition:
+        color 0.3s ease,
+        gap 0.3s ease;
+}
+
+.nav-temporada span {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.nav-temporada small {
+    color: #777777;
+
+    font-size: 0.65rem;
+    font-weight: 700;
+
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.nav-temporada strong {
+    color: #ffffff;
+
+    font-family: "Cinzel", serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.nav-temporada i {
+    font-size: 0.8rem;
+    transition: transform 0.3s ease;
+}
+
+.nav-temporada.anterior:hover,
+.nav-temporada.siguiente:hover {
+    color: #ffffff;
+    gap: 16px;
+}
+
+.nav-temporada.siguiente {
+    text-align: right;
+}
+
+.nav-temporada.anterior:hover i {
+    transform: translateX(-3px);
+}
+
+.nav-temporada.siguiente:hover i {
+    transform: translateX(3px);
+}
+
+
+/* AJUSTE DEL TÍTULO
+   Se conserva porque forma parte del ajuste visual actual. */
+
+#titulo-temporada {
+    margin-right: -20px;
+}
+
+
+/* =========================================================
+   13. LISTA DE EPISODIOS
+   ========================================================= */
+
+.episodios {
+    padding: 90px 0 100px;
+
+    background-color: #0a0a0a;
+    border-top: 1px solid #222222;
+}
+
+.episodios .titulo-seccion {
+    margin-bottom: 50px;
+}
+
+.episodios .titulo-seccion h2 {
+    font-size: 2.8rem;
+}
+
+.lista-episodios {
+    display: flex;
+    flex-direction: column;
+
+    border-top: 1px solid #333333;
+}
+
+.episodio {
+    position: relative;
+
+    display: grid;
+    grid-template-columns: 80px 1fr auto;
+    align-items: center;
+
+    padding: 25px 20px;
+
+    border-bottom: 1px solid #333333;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.episodio:hover {
+    background-color: #151515;
+    border-color: #444444;
+}
+
+
+/* NÚMERO */
+
+.numero-episodio {
+    color: #c9a227;
+
+    font-family: "Cinzel", serif;
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+
+/* INFORMACIÓN */
+
+.info-episodio {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.info-episodio h3 {
+    margin: 0;
+
+    color: #ffffff;
+
+    font-family: "Cinzel", serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.info-episodio p {
+    margin: 0;
+
+    color: #777777;
+
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+
+/* ÍCONO */
+
+.icono-episodio {
+    color: #c9a227;
+    font-size: 0.9rem;
+
+    transition:
+        transform 0.3s ease,
+        color 0.3s ease;
+}
+
+.episodio:hover .icono-episodio {
+    color: #ffffff;
+}
+
+
+/* SINOPSIS */
+
+.sinopsis-episodio {
+    grid-column: 2 / 3;
+
+    max-height: 0;
+    overflow: hidden;
+
+    margin-top: 0;
+
+    color: #aaaaaa;
+
+    font-size: 0.9rem;
+    line-height: 1.7;
+
+    opacity: 0;
+
+    transition:
+        max-height 0.4s ease,
+        margin-top 0.4s ease,
+        opacity 0.4s ease;
+}
+
+
+/* EPISODIO ABIERTO */
+
+.episodio.abierto {
+    background-color: #151515;
+    border-color: #c9a227;
+}
+
+.episodio.abierto .icono-episodio {
+    color: #ffffff;
+    transform: rotate(90deg);
+}
+
+.episodio.abierto .sinopsis-episodio {
+    max-height: 200px;
+    margin-top: 15px;
+    opacity: 1;
+}
+
+
+/* =========================================================
+   14. FOOTER
+   ========================================================= */
+
+.footer {
+    padding: 25px 0;
+
+    background-color: #0a0a0a;
+    border-top: 1px solid #333333;
+}
+
+.footer-contenido {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.legales {
+    color: #777777;
+    font-size: 0.8rem;
+    line-height: 1.6;
+}
+
+.redes-sociales {
+    display: flex;
+    gap: 20px;
+}
+
+.redes-sociales a {
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: #ffffff;
+
+    border: 1px solid #444444;
+    border-radius: 50%;
+
+    text-decoration: none;
+
+    transition: all 0.3s ease;
+}
+
+.redes-sociales a:hover {
+    color: #c9a227;
+    border-color: #c9a227;
+    transform: translateY(-3px);
+}
+
+
+/* =========================================================
+   15. MENÚ HAMBURGUESA
+   ========================================================= */
+
+.boton-menu {
+    display: none;
+
+    width: 42px;
+    height: 42px;
+
+    color: #ffffff;
+    background-color: transparent;
+
+    border: 1px solid #333333;
+
+    font-size: 1.2rem;
+    cursor: pointer;
+
+    transition:
+        color 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.boton-menu:hover {
+    color: #c9a227;
+    border-color: #c9a227;
+}
+
+
+/* =========================================================
+   16. RESPONSIVE — TABLET GRANDE
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    /* TEMPORADAS */
+
+    .tarjeta-temporada {
+        flex: 1 1 calc(50% - 25px);
+    }
+
+
+    /* GALERÍA */
+
+    .foto,
+    .foto-grande {
+        flex: 1 1 calc(50% - 20px);
+    }
+
+
+    /* DETALLE DE TEMPORADA */
+
+    .contenido-detalle {
+        gap: 40px;
+    }
+
+    .imagen-detalle {
+        flex: 0 0 340px;
+    }
+
+    .imagen-detalle img {
+        height: 450px;
+    }
+
+    .texto-detalle h1 {
+        font-size: 3rem;
+    }
+}
+
+
+/* =========================================================
+   17. RESPONSIVE — TABLET / CELULAR
+   ========================================================= */
+
+@media (max-width: 800px) {
+    /* HEADER */
+
+    .header-contenido {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+
+    /* MENÚ */
+
+    .navegacion {
+        position: relative;
+    }
+
+    .boton-menu {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .navegacion ul {
+        position: absolute;
+
+        top: 55px;
+        right: 0;
+
+        width: 200px;
+
+        display: none;
+        flex-direction: column;
+        gap: 0;
+
+        padding: 10px 0;
+
+        background-color: #111111;
+        border: 1px solid #333333;
+
+        z-index: 100;
+    }
+
+    .navegacion ul.menu-abierto {
+        display: flex;
+    }
+
+    .navegacion li {
+        width: 100%;
+    }
+
+    .navegacion a {
+        display: block;
+        width: 100%;
+
+        padding: 14px 20px;
+
+        font-size: 0.8rem;
+    }
+
+    .navegacion a::after {
+        display: none;
+    }
+
+
+    /* INICIO */
+
+    .inicio {
+        min-height: calc(100vh - 85px);
+    }
+
+    .contenido-inicio {
+        justify-content: center;
+
+        padding: 0 10px;
+
+        text-align: center;
+    }
+
+    .texto-inicio {
+        max-width: 600px;
+    }
+
+    .texto-inicio h1 {
+        font-size: 4.5rem;
+        letter-spacing: 8px;
+    }
+
+    .texto-inicio .linea-dorada {
+        margin: 25px auto 30px;
+    }
+
+    .texto-inicio p:not(.subtitulo) {
+        max-width: 100%;
+    }
+
+    .boton-principal {
+        justify-content: center;
+    }
+
+
+    /* SECCIONES DEL INICIO */
+
+    .introduccion,
+    .personajes,
+    .temporadas-destacadas {
+        padding: 70px 0;
+    }
+
+    .contenido-introduccion {
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .texto-introduccion {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .texto-introduccion .linea-dorada {
+        margin: 25px auto 30px;
+    }
+
+    .dato-introduccion {
+        width: 180px;
+        min-width: 180px;
+        height: 180px;
+    }
+
+    .dato-introduccion strong {
+        font-size: 4rem;
+    }
+
+
+    /* PERSONAJES */
+
+    .lista-personajes {
+        gap: 15px;
+    }
+
+    .tarjeta-personaje {
+        flex: 1 1 calc(50% - 15px);
+    }
+
+
+    /* TEMPORADAS DESTACADAS */
+
+    .lista-destacadas {
+        flex-direction: column;
+    }
+
+    .destacada {
+        width: 100%;
+        height: 300px;
+    }
+
+
+    /* CONTACTO */
+
+    .contenido-contacto {
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .formulario-contacto,
+    .informacion-contacto {
+        width: 100%;
+    }
+
+    .informacion-contacto {
+        padding-top: 0;
+    }
+
+
+    /* FOOTER */
+
+    .footer-contenido {
+        flex-direction: column;
+        gap: 20px;
+
+        text-align: center;
+    }
+
+
+    /* DETALLE DE TEMPORADA */
+
+    .detalle-temporada {
+        padding: 70px 0;
+    }
+
+    .contenido-detalle {
+        flex-direction: column-reverse;
+        align-items: stretch;
+        gap: 50px;
+    }
+
+    .texto-detalle {
+        max-width: none;
+        text-align: center;
+    }
+
+    .texto-detalle h1 {
+        font-size: 3.5rem;
+    }
+
+    .texto-detalle > p:not(.subtitulo) {
+        max-width: 100%;
+    }
+
+    .texto-detalle .linea-dorada {
+        margin: 25px auto 30px;
+    }
+
+    .datos-temporada {
+        justify-content: center;
+    }
+
+    .imagen-detalle {
+        width: 100%;
+        max-width: 450px;
+
+        flex: none;
+
+        margin: 0 auto;
+    }
+
+    .imagen-detalle img {
+        height: 520px;
+    }
+
+    /* DROPDOWN DE TEMPORADAS EN MOBILE */
+
+.menu-desplegable {
+    width: 100%;
+}
+
+.enlace-temporadas {
+    justify-content: center;
+}
+
+.submenu-temporadas {
+    position: static;
+
+    width: 100%;
+    min-width: 0;
+
+    padding: 5px 0;
+
+    background-color: #151515;
+
+    border: none;
+
+    transform: none;
+
+    opacity: 1;
+    visibility: visible;
+
+    pointer-events: auto;
+
+    display: none;
+}
+
+.submenu-temporadas::before {
+    display: none;
+}
+
+.menu-desplegable.submenu-abierto .submenu-temporadas {
+    display: flex;
+}
+
+.menu-desplegable.submenu-abierto .enlace-temporadas i {
+    transform: rotate(180deg);
+}
+
+.submenu-temporadas li a {
+    padding: 10px;
+
+    text-align: center;
+
+    font-size: 0.75rem;
+}
+
+.submenu-temporadas li a:hover {
+    padding-left: 10px;
+}
+}
+
+
+/* =========================================================
+   18. RESPONSIVE — CELULAR
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    /* SECCIONES */
+
+    .temporadas,
+    .galeria {
+        padding: 50px 0;
+    }
+
+    .titulo-seccion {
+        margin-bottom: 40px;
+    }
+
+    .titulo-seccion h1 {
+        font-size: 2.5rem;
+    }
+
+
+    /* TEMPORADAS */
+
+    .tarjeta-temporada {
+        flex: 1 1 100%;
+
+        min-width: 0;
+        height: 240px;
+    }
+
+    .numero-temporada {
+        font-size: 3.5rem;
+    }
+
+
+    /* PERSONAJES */
+
+    .tarjeta-personaje {
+        flex: 1 1 100%;
+    }
+
+
+    /* TEMPORADAS DESTACADAS */
+
+    .destacada {
+        height: 280px;
+    }
+
+    .boton-temporadas .boton-principal {
+        width: 100%;
+
+        justify-content: center;
+        text-align: center;
+    }
+
+
+    /* INTRODUCCIÓN */
+
+    .texto-introduccion h2 {
+        font-size: 2.2rem;
+    }
+
+
+    /* GALERÍA */
+
+    .foto,
+    .foto-grande {
+        flex: 1 1 100%;
+        height: 280px;
+    }
+
+
+    /* CONTACTO */
+
+    .formulario-contacto {
+        padding: 25px 20px;
+    }
+
+    .formulario-contacto button {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .informacion-contacto h2 {
+        font-size: 1.6rem;
+    }
+
+
+    /* DETALLE */
+
+    .detalle-temporada {
+        padding: 55px 0;
+    }
+
+    .texto-detalle h1 {
+        font-size: 2.5rem;
+    }
+
+    .texto-detalle > p:not(.subtitulo) {
+        font-size: 0.9rem;
+        line-height: 1.7;
+    }
+
+    .datos-temporada {
+        gap: 40px;
+
+        margin-top: 30px;
+        padding-top: 20px;
+    }
+
+    .datos-temporada p {
+        font-size: 1.2rem;
+    }
+
+    .volver-temporadas {
+        margin-top: 30px;
+    }
+
+    .imagen-detalle {
+        max-width: 100%;
+    }
+
+    .imagen-detalle img {
+        height: 420px;
+    }
+
+
+    /* EPISODIOS */
+
+    .episodios {
+        padding: 60px 0 70px;
+    }
+
+    .episodios .titulo-seccion {
+        margin-bottom: 35px;
+    }
+
+    .episodios .titulo-seccion h2 {
+        font-size: 2.3rem;
+    }
+
+    .episodio {
+        grid-template-columns: 50px 1fr auto;
+        padding: 20px 10px;
+    }
+
+    .numero-episodio {
+        font-size: 1.1rem;
+    }
+
+    .info-episodio h3 {
+        font-size: 0.95rem;
+    }
+
+    .info-episodio p {
+        font-size: 0.65rem;
+    }
+
+    .sinopsis-episodio {
+        grid-column: 2 / 4;
+        font-size: 0.82rem;
+    }
+
+    /* LIGHTBOX */
+
+.lightbox {
+    padding: 25px 15px;
+}
+
+.lightbox-contenido {
+    max-width: 90vw;
+}
+
+.lightbox-contenido img {
+    max-height: 65vh;
+}
+
+.lightbox-cerrar {
+    top: 15px;
+    right: 15px;
+}
+
+.lightbox-anterior,
+.lightbox-siguiente {
+    width: 38px;
+    height: 38px;
+}
+
+.lightbox-anterior {
+    left: 10px;
+}
+
+.lightbox-siguiente {
+    right: 10px;
+}
+
+.lightbox-info h2 {
+    font-size: 1.05rem;
+}
+
+.lightbox-info p {
+    font-size: 0.75rem;
+}
+}
+
+
+/* =========================================================
+   19. RESPONSIVE — CELULAR PEQUEÑO
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+    /* HEADER */
+
+    .header {
+        padding: 20px 0;
+    }
+
+    .logo {
+        font-size: 1.7rem;
+    }
+
+
+    /* INICIO */
+
+    .inicio {
+        min-height: calc(100vh - 80px);
+    }
+
+    .texto-inicio h1 {
+        font-size: 3.2rem;
+        letter-spacing: 6px;
+    }
+
+    .texto-inicio p:not(.subtitulo) {
+        font-size: 0.9rem;
+        line-height: 1.7;
+    }
+
+    .boton-principal {
+        width: 100%;
+    }
+
+    .imagen-inicio img {
+        height: 300px;
+    }
+
+
+    /* FOOTER */
+
+    .redes-sociales {
+        gap: 12px;
+    }
+
+
+    /* CONTACTO */
+
+    .contacto {
+        padding: 50px 0;
+    }
+
+
+    /* DETALLE */
+
+    .detalle-temporada {
+        padding: 40px 0;
+    }
+
+    .texto-detalle h1 {
+        font-size: 2.2rem;
+        letter-spacing: 3px;
+    }
+
+    .texto-detalle > p:not(.subtitulo) {
+        font-size: 0.9rem;
+    }
+
+    .datos-temporada {
+        gap: 30px;
+    }
+
+    .imagen-detalle img {
+        height: 360px;
+    }
+
+
+    /* EPISODIOS */
+
+    .episodio {
+        grid-template-columns: 45px 1fr auto;
+        padding: 18px 10px;
+    }
+
+    .numero-episodio {
+        font-size: 1rem;
+    }
+
+    .info-episodio h3 {
+        font-size: 0.88rem;
+    }
+
+    .icono-episodio {
+        font-size: 0.75rem;
+    }
+}
+
+.imagen-4 {
+    object-position: center 20%;
+}
+
+.imagen-8 {
+    object-position: center 0%;
+}
+
+/* =========================================================
+   DROPDOWN DE TEMPORADAS
+   ========================================================= */
+
+.menu-desplegable {
+    position: relative;
+}
+
+
+/* ENLACE PRINCIPAL */
+
+.enlace-temporadas {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.enlace-temporadas i {
+    font-size: 0.65rem;
+    transition: transform 0.3s ease;
+}
+
+
+/* SUBMENÚ */
+
+.submenu-temporadas {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+
+    min-width: 190px;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 8px 0;
+
+    background-color: #181818;
+    border: 1px solid #333333;
+
+    transform: translateX(-50%) translateY(-10px);
+
+    opacity: 0;
+    visibility: hidden;
+
+    pointer-events: none;
+
+    transition:
+        opacity 0.25s ease,
+        transform 0.25s ease,
+        visibility 0.25s ease;
+
+    z-index: 1000;
+}
+
+
+/* PEQUEÑO CONECTOR CON EL NAV */
+
+.submenu-temporadas::before {
+    content: "";
+
+    position: absolute;
+
+    top: -6px;
+    left: 50%;
+
+    width: 11px;
+    height: 11px;
+
+    background-color: #181818;
+
+    border-left: 1px solid #333333;
+    border-top: 1px solid #333333;
+
+    transform: translateX(-50%) rotate(45deg);
+}
+
+
+/* MOSTRAR SUBMENÚ */
+
+.menu-desplegable:hover .submenu-temporadas,
+.menu-desplegable:focus-within .submenu-temporadas {
+    opacity: 1;
+    visibility: visible;
+
+    pointer-events: auto;
+
+    transform: translateX(-50%) translateY(0);
+}
+
+.menu-desplegable:hover .enlace-temporadas i,
+.menu-desplegable:focus-within .enlace-temporadas i {
+    transform: rotate(180deg);
+}
+
+
+/* OPCIONES DEL SUBMENÚ */
+
+.submenu-temporadas li {
+    width: 100%;
+}
+
+.submenu-temporadas li a {
+    display: block;
+
+    width: 100%;
+
+    padding: 10px 20px;
+
+    color: #cccccc;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.78rem;
+    font-weight: 500;
+
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+
+    white-space: nowrap;
+
+    transition:
+        color 0.25s ease,
+        background-color 0.25s ease,
+        padding-left 0.25s ease;
+}
+
+.submenu-temporadas li a::after {
+    display: none;
+}
+
+.submenu-temporadas li a:hover {
+    color: #c9a227;
+    background-color: #222222;
+
+    padding-left: 25px;
+}
+
+/* =========================================================
+   DROPDOWN DE TEMPORADAS
+   ========================================================= */
+
+.menu-desplegable {
+    position: relative;
+}
+
+
+/* ENLACE PRINCIPAL */
+
+.enlace-temporadas {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.enlace-temporadas i {
+    font-size: 0.65rem;
+    transition: transform 0.3s ease;
+}
+
+
+/* SUBMENÚ */
+
+.menu-desplegable .submenu-temporadas {
+    position: absolute;
+    top: calc(100% + 12px);
+    left: 50%;
+
+    width: 190px;
+    min-width: 190px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+
+    padding: 8px 0;
+
+    background-color: #181818;
+    border: 1px solid #333333;
+
+    transform: translateX(-50%);
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    transition:
+        opacity 0.25s ease,
+        visibility 0.25s ease;
+
+    z-index: 1000;
+}
+
+.menu-desplegable::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 12px;
+}
+
+
+/* PEQUEÑO CONECTOR CON EL NAV */
+
+.menu-desplegable .submenu-temporadas::before {
+    content: "";
+
+    position: absolute;
+
+    top: -6px;
+    left: 50%;
+
+    width: 11px;
+    height: 11px;
+
+    background-color: #181818;
+
+    border-left: 1px solid #333333;
+    border-top: 1px solid #333333;
+
+    transform: translateX(-50%) rotate(45deg);
+}
+
+
+/* MOSTRAR SUBMENÚ */
+
+.menu-desplegable:hover .submenu-temporadas,
+.menu-desplegable:focus-within .submenu-temporadas {
+    opacity: 1;
+    visibility: visible;
+
+    pointer-events: auto;
+
+    transform: translateX(-50%) translateY(0);
+}
+
+.menu-desplegable:hover .enlace-temporadas i,
+.menu-desplegable:focus-within .enlace-temporadas i {
+    transform: rotate(180deg);
+}
+
+
+/* OPCIONES DEL SUBMENÚ */
+
+.menu-desplegable .submenu-temporadas li {
+    width: 100%;
+}
+
+.menu-desplegable .submenu-temporadas li a {
+    display: block;
+
+    width: 100%;
+
+    padding: 10px 20px;
+
+    color: #cccccc;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.78rem;
+    font-weight: 500;
+
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+
+    white-space: nowrap;
+
+    transition:
+        color 0.25s ease,
+        background-color 0.25s ease,
+        padding-left 0.25s ease;
+}
+
+.menu-desplegable .submenu-temporadas li a::after {
+    display: none;
+}
+
+.menu-desplegable .submenu-temporadas li a:hover {
+    color: #c9a227;
+    background-color: #222222;
+
+    padding-left: 25px;
+}
+
+
+/* =========================================================
+   DROPDOWN — MOBILE
+   ========================================================= */
+
+@media (max-width: 800px) {
+
+    .menu-desplegable {
+        width: 100%;
+    }
+
+    .enlace-temporadas {
+        justify-content: center;
+    }
+
+    .menu-desplegable .submenu-temporadas {
+        position: static;
+
+        width: 100%;
+        min-width: 0;
+
+        padding: 5px 0;
+
+        background-color: #151515;
+
+        border: none;
+
+        transform: none;
+
+        opacity: 1;
+        visibility: visible;
+
+        pointer-events: auto;
+
+        display: none;
+    }
+
+    .menu-desplegable .submenu-temporadas::before {
+        display: none;
+    }
+
+    .menu-desplegable.submenu-abierto .submenu-temporadas {
+        display: flex;
+    }
+
+    .menu-desplegable.submenu-abierto .enlace-temporadas i {
+        transform: rotate(180deg);
+    }
+
+    .menu-desplegable .submenu-temporadas li a {
+        padding: 10px;
+
+        text-align: center;
+
+        font-size: 0.75rem;
+    }
+
+    .menu-desplegable .submenu-temporadas li a:hover {
+        padding-left: 10px;
+    }
+}

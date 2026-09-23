@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Suits | Serie</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- Hoja de estilos -->
+    <link rel="stylesheet" href="CSS/estilos.css">
+</head>
+
+<body>
+
+    <!-- CABECERA -->
+    <header class="header">
+        <div class="contenedor header-contenido">
+
+            <a href="index.html" class="logo">
+                <img src="IMG/logo.webp" alt="Suits">
+            </a>
+
+            <nav class="navegacion">
+
+                <button class="boton-menu" aria-label="Abrir menú">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+
+                <ul>
+                    <li><a href="index.html" class="activo">Inicio</a></li>
+
+                    <li class="menu-desplegable">
+    <a href="temporadas.html" class="enlace-temporadas">
+        Temporadas
+        <i class="fa-solid fa-chevron-down"></i>
+    </a>
+
+    <ul class="submenu-temporadas">
+        <li>
+            <a href="temporada.html?temporada=1">Temporada 1</a>
+        </li>
+        <li>
+            <a href="temporada.html?temporada=2">Temporada 2</a>
+        </li>
+        <li>
+            <a href="temporada.html?temporada=3">Temporada 3</a>
+        </li>
+        <li>
+            <a href="temporada.html?temporada=4">Temporada 4</a>
+        </li>
+        <li>
+            <a href="temporada.html?temporada=5">Temporada 5</a>
+        </li>
+        <li>
+            <a href="temporada.html?temporada=6">Temporada 6</a>
+        </li>
+        <li>
+            <a href="temporada.html?temporada=7">Temporada 7</a>
+        </li>
+        <li>
+            <a href="temporada.html?temporada=8">Temporada 8</a>
+        </li>
+        <li>
+            <a href="temporada.html?temporada=9">Temporada 9</a>
+        </li>
+    </ul>
+</li>
+
+                    <li><a href="galerias.html">Galería</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+
+            </nav>
+
+
+        </div>
+    </header>
+
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main>
+
+        <section class="inicio">
+            <video class="video-fondo" autoplay muted loop playsinline>
+                <source src="IMG/intro.mp4" type="video/mp4">
+                Tu navegador no soporta videos HTML5.
+            </video>
+
+            <div class="overlay-video"></div>
+
+            <div class="contenedor contenido-inicio">
+                <div class="texto-inicio">
+                    <p class="subtitulo">USA NETWORK</p>
+
+                    <h1>SUITS</h1>
+
+                    <div class="linea-dorada"></div>
+
+                    <p>
+                        Dos abogados brillantes. Una firma de élite.
+                        Un&nbsp;secreto&nbsp;que&nbsp;puede&nbsp;cambiarlo&nbsp;todo.
+                    </p>
+
+                    <a href="temporadas.html" class="boton-principal">
+                        Explorar temporadas
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <section class="introduccion">
+            <div class="contenedor contenido-introduccion">
+
+                <div class="texto-introduccion">
+                    <p class="subtitulo">LA SERIE</p>
+
+                    <h2>Negocios. Poder. Lealtad.</h2>
+
+                    <div class="linea-dorada"></div>
+
+                    <p>
+                        Suits sigue la historia de Harvey Specter, uno de los mejores
+                        abogados corporativos de Nueva York, y Mike Ross, un joven
+                        brillante que nunca terminó la universidad pero posee una
+                        memoria&nbsp;extraordinaria.
+                    </p>
+
+                    <p>
+                        Después de un encuentro inesperado, ambos comienzan a trabajar
+                        juntos en uno de los bufetes más prestigiosos de la ciudad,
+                        mientras intentan mantener en secreto el pasado&nbsp;de&nbsp;Mike.
+                    </p>
+                </div>
+
+                <div class="dato-introduccion">
+                    <span>2011 — 2019</span>
+                    <strong>9</strong>
+                    <p>Temporadas</p>
+                </div>
+
+            </div>
+        </section>
+        <section class="personajes">
+            <div class="contenedor">
+
+                <div class="titulo-seccion">
+                    <p class="subtitulo">ELENCO PRINCIPAL</p>
+                    <h2>Personajes</h2>
+                    <div class="linea-dorada"></div>
+                    <p>
+                        Las personas que hicieron de Pearson Specter Litt mucho más
+                        que un simple bufete&nbsp;de&nbsp;abogados.
+                    </p>
+                </div>
+
+                <div class="lista-personajes">
+
+                    <article class="tarjeta-personaje personaje-harvey">
+                        <div class="contenido-personaje">
+                            <span class="numero-personaje">01</span>
+
+                            <div class="info-personaje">
+                                <h3>Harvey Specter</h3>
+                                <p>Abogado corporativo</p>
+                                <div class="linea-personaje"></div>
+                                <span>El mejor negociador de Nueva York.</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="tarjeta-personaje personaje-mike">
+                        <div class="contenido-personaje">
+                            <span class="numero-personaje">02</span>
+
+                            <div class="info-personaje">
+                                <h3>Mike Ross</h3>
+                                <p>Abogado</p>
+                                <div class="linea-personaje"></div>
+                                <span>Una memoria extraordinaria y talento&nbsp;natural.</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="tarjeta-personaje personaje-donna">
+                        <div class="contenido-personaje">
+                            <span class="numero-personaje">03</span>
+
+                            <div class="info-personaje">
+                                <h3>Donna Paulsen</h3>
+                                <p>Secretaria</p>
+                                <div class="linea-personaje"></div>
+                                <span>La secretaria que siempre sabe lo que está&nbsp;pasando.</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="tarjeta-personaje personaje-louis">
+                        <div class="contenido-personaje">
+                            <span class="numero-personaje">04</span>
+
+                            <div class="info-personaje">
+                                <h3>Louis Litt</h3>
+                                <p>Abogado corporativo</p>
+                                <div class="linea-personaje"></div>
+                                <span>Ambición, talento y una personalidad inolvidable.</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="tarjeta-personaje personaje-jessica">
+                        <div class="contenido-personaje">
+                            <span class="numero-personaje">05</span>
+
+                            <div class="info-personaje">
+                                <h3>Jessica Pearson</h3>
+                                <p>Socia directora</p>
+                                <div class="linea-personaje"></div>
+                                <span>Autoridad y liderazgo dentro del&nbsp;bufete.</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="tarjeta-personaje personaje-rachel">
+                        <div class="contenido-personaje">
+                            <span class="numero-personaje">06</span>
+
+                            <div class="info-personaje">
+                                <h3>Rachel Zane</h3>
+                                <p>Abogada</p>
+                                <div class="linea-personaje"></div>
+                                <span>Determinación, inteligencia, belleza y&nbsp;ambición.</span>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+
+            </div>
+        </section>
+        <section class="temporadas-destacadas">
+            <div class="contenedor">
+
+                <div class="titulo-seccion">
+                    <p class="subtitulo">LA HISTORIA</p>
+                    <h2>Temporadas</h2>
+                    <div class="linea-dorada"></div>
+                    <p>
+                        Nueve temporadas de alianzas, conflictos y decisiones
+                        que cambiaron para siempre a&nbsp;los&nbsp;protagonistas.
+                    </p>
+                </div>
+
+                <div class="lista-destacadas">
+
+                    <article class="destacada temporada-destacada-1">
+                        <div>
+                            <span>01</span>
+                            <h3>Temporada 1</h3>
+                            <p>
+                                El encuentro que cambia la vida de Harvey&nbsp;y&nbsp;Mike.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="destacada temporada-destacada-5">
+                        <div>
+                            <span>05</span>
+                            <h3>Temporada 5</h3>
+                            <p>
+                                Decisiones difíciles ponen a prueba al&nbsp;equipo.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="destacada temporada-destacada-9">
+                        <div>
+                            <span>09</span>
+                            <h3>Temporada 9</h3>
+                            <p>
+                                El capítulo final de una historia&nbsp;inolvidable.
+                            </p>
+                        </div>
+                    </article>
+
+                </div>
+
+                <div class="boton-temporadas">
+                    <a href="temporadas.html" class="boton-principal">
+                        Explorar todas las temporadas
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+
+    <!-- PIE DE SITIO -->
+    <footer class="footer">
+
+        <div class="contenedor footer-contenido">
+
+            <div class="legales">
+                <p>&copy; 2026 Suits Fan Site</p>
+                <p>Todos los derechos reservados.</p>
+            </div>
+
+            <div class="redes-sociales">
+
+                <a href="#" aria-label="X">
+                    <i class="fa-brands fa-x-twitter"></i>
+                </a>
+
+                <a href="#" aria-label="Instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+
+                <a href="#" aria-label="Facebook">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+
+                <a href="#" aria-label="YouTube">
+                    <i class="fa-brands fa-youtube"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+    </footer>
+    <script src="JS/script.js"></script>
+</body>
+
+</html>
